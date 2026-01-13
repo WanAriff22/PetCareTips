@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+    About Us - Pet Care Hub
+  </title>
+  <link rel="icon" type="image/x-icon" href="images/pet_care_logo.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <a href="index.html" class="home-btn" title="Go to Home" aria-label="Home">
+        <img src="images/pet_care_logo.png" alt="Pet Care Logo">
+      </a>
+      <span class="brand-name">&#x1F43E; PET CARE</span>
+    </div>
+
+    <div class="header-right">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+
+          <li class="dropdown">
+            <a href="petcategory.html" class="dropbtn">Pet Category &#x25BE;</a>
+            <div class="dropdown-content">
+              <a href="dog.html">&#x1F436; Dog</a>
+              <a href="cat.html">&#x1F431; Cat</a>
+              <a href="fish.html">&#x1F41F; Fish</a>
+              <a href="rabbit.html">&#x1F430; Rabbit</a>
+              <a href="hamster.html">&#x1F439; Hamster</a>
+              <a href="tortoise.html">&#x1F422; Tortoise</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- Search form -->
+      <form class="search-container" role="search" action="/search" method="get">
+        <input type="search" name="q" placeholder="Search tips..." aria-label="Search pet care tips">
+        <button type="submit" class="search-btn" aria-label="Search">&#x1F50D;</button>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h1>ABOUT US</h1>
+      </div>
+    </section>
+    <div class="tabs-container">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showSection('introduction', this)">Introduction</button>
+        <button class="tab-btn" onclick="showSection('commitment', this)">Commitment &amp; Team</button>
+        <button class="tab-btn" onclick="showSection('feedback', this)">Feedback</button>
+        <button class="tab-btn" onclick="showSection('community', this)">Community Q&amp;A</button>
+      </div>
+    
+    <section class="tab-content active-content" id="introduction">
+      <h2>Our Mission</h2>
+      <p>We created Pet Care Hub with a simple goal: to provide accessible, reliable, and comprehensive pet care
+        information to pet owners everywhere.</p>
+      <br/>
+      <h2>Why We Started</h2>
+      <p>Finding trustworthy pet care information shouldn't be difficult. We built this hub to be your go-to resource
+            for everything from basic care to emergency situations.</p>
+    </section>
+
+    <section class="tab-content" id="commitment">
+      <h2>Our Commitment</h2>
+      <ul style="list-style-position: inside; text-align: left; max-width: 600px; margin: 0 auto;">
+        <li>Evidence-based information reviewed by veterinary professionals</li>
+        <li>Easy-to-understand guides for all experience levels</li>
+        <li>Regular updates with the latest pet care practices</li>
+        <li>Free access to all resources</li>
+        <li>Community-driven support and shared experiences</li>
+      </ul>
+      <br/>
+      
+      <hr style="border: 1px solid #ddd; margin: 30px 0;"/>
+      <h2>Meet The Specialists</h2>
+      <div class="table-wrapper">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Specialty</th>
+              <th>Experience</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Wan Ariff</td>
+              <td>Team Leader</td>
+              <td>Tortoise Tamer &amp; Fish Whisperer</td>
+              <td>15 Years</td>
+            </tr>
+            <tr>
+              <td>Che Ku NurulHuda</td>
+              <td>System Developer</td>
+              <td>Cat person &amp; Dog Talker</td>
+              <td>20 Years</td>
+            </tr>
+            <tr>
+              <td>Ainaa Nadhirah</td>
+              <td>Wireframe Developer</td>
+              <td>Rabbit &amp; Hamster Training</td>
+              <td>10 Years</td>
+            </tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="tab-content" id="feedback">
+      <h2>Get In Touch</h2>
+      <p style="text-align: center;">Have questions? We would love to hear from you!</p>
+      <form class="feedback-form" id="feedbackForm">
+        <label>Your Name</label>
+        <input id="userName" type="text" required placeholder="Enter your name">
+
+        <label>Email Address</label>
+        <input id="userEmail" type="email" required placeholder="Enter your email">
+
+        <label>What type of pet do you own?</label>
+        <select id="petType" required>
+          <option value="">-- Select a pet --</option>
+          <option value="dog">🐶 Dog</option>
+          <option value="cat">🐱 Cat</option>
+          <option value="rabbit">🐰 Rabbit</option>
+          <option value="hamster">🐹 Hamster</option>
+          <option value="fish">🐟 Fish</option>
+          <option value="tortoise">🐢 Tortoise</option>
+          <option value="other">Other</option>
+        </select>
+        
+        <!-- Radio Buttons -->
+        <label>How often do you visit our site?</label>
+        <div class="radio-group">
+          <input id="first-time" name="frequency" type="radio" value="first-time">
+          <label for="first-time">First time</label>
+          <br><br>
+          <input id="weekly" name="frequency" type="radio" value="weekly">
+          <label for="weekly">Weekly</label>
+          <br><br>
+          <input id="daily" name="frequency" type="radio" value="daily">
+          <label for="daily">Daily</label>
+        </div>
+        <label>Subject</label>
+        <input id="userSubject" placeholder="Enter subject" type="text">
+
+        <label>Your Message</label>
+        <textarea id="userMessage" placeholder="Type your message/question here..." required rows="4"></textarea>
+        <!-- Checkbox -->
+        <div class="checkbox-group">
+          <input id="subscribe" name="subscribe" type="checkbox">
+          <label for="subscribe">Subscribe to our pet care newsletter</label>
+        </div>
+        <button class="submit-btn" onclick="postToCommunity()" type="button">Submit</button>
+      </form>
+      </section>
+    <section class="tab-content" id="community">
+      <h2>Community Q&amp;A</h2>
+      <p style="text-align: center; margin-bottom: 20px;">Share experiences, ask questions and learn from other pet owners.</p>
+
+      <div class="qa-container" id="qaContainer">
+        <div class="qa-card admin-post">
+          <div style="flex-grow:1;">
+            <strong>Admin:</strong> Welcome to the community! Post your questions in the Feedback tab.
+          </div>
+        </div>
+
+        <div class="qa-card">
+          <div class="qa-header">Leo asks:</div>
+          <div class="qa-message">My cat keeps scratching the sofa even though I bought a scratching post. Any advice?</div>
+
+          <div class="qa-replies-area">
+            <div class="qa-reply"><strong>Sangwon replied:</strong> Try rubbing catnip on the post!</div>
+            <div class="qa-reply"><strong>Jay replied:</strong> Double sided tape on the sofa works wonders to deter them.</div>
+          </div>
+
+          <div class="qa-input-bar">
+            <input class="input-name" placeholder="Your name" type="text">
+            <input class="input-msg" placeholder="Write a reply..." type="text">
+            <button class="qa-reply-btn" onclick="addReplyToPost(this)">Reply</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>&#x1F43E; Pet Care Tips</h3>
+          <p>Expert care tips for dogs, cats, rabbits, hamsters, birds, fish, and tortoise. We help you keep all your beloved pets happy and healthy!</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="petcategory.html">Pet Categories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <p>&#x1F4CD; UMT, Kuala Nerus, 21030, Terengganu</p>
+          <p>&#x1F4DE; +1 234 567 890</p>
+          <p>&#x2709;&#xFE0F; petcarewebs@gmail.com</p>
+          <p>&#x1F552; Sun-Thur: 9AM - 6PM</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 <a href="mailto:petcarewebs@gmail.com">Pet Care Tips</a>. All Rights Reserved. Made with &#x2764;&#xFE0F; for Pet Lovers</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+
+
+</html>

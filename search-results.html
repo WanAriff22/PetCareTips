@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Pet Care Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="home-btn" title="Go to Home" aria-label="Home">
+                <img src="images/pet_care_logo.ico" alt="Pet Care Logo">
+            </a>
+            <span class="brand-name">🐾 PET CARE</span>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="petcategory.html" class="dropbtn">Pet Category ▾</a>
+                        <div class="dropdown-content">
+                            <a href="dog.html">🐶 Dog</a>
+                            <a href="cat.html">🐱 Cat</a>
+                            <a href="fish.html">🐟 Fish</a>
+                            <a href="rabbit.html">🐰 Rabbit</a>
+                            <a href="hamster.html">🐹 Hamster</a>
+                            <a href="tortoise.html">🐢 Tortoise</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <form class="search-container" role="search" action="search" method="get">
+                <input type="search" name="q" placeholder="Search tips..." aria-label="Search pet care tips">
+                <button type="submit" class="search-btn" aria-label="Search">🔍</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-results-container">
+            <h1>Search Results for: <span id="search-query"></span></h1>
+            <div id="results-container"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>🐾 Pet Care Tips</h3>
+                <p>Expert care tips for dogs, cats, rabbits, hamsters, birds, fish, and tortoise.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="petcategory.html">Pet Categories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 <a href="mailto:petcarewebs@gmail.com">Pet Care Tips</a>. All Rights Reserved. Made with &#x2764;&#xFE0F; for Pet Lovers</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
